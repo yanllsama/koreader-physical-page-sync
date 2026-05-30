@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="Reader_Sari Yuz - R. F. Kuang.epub_p.png" alt="Hata Ekranı">
+</p>
+
 # KOReader Physical Page Sync (yanllsama)
 
 A custom modification for the official KOReader `statistics.koplugin` that synchronizes e-reader page turns with the actual physical pages of a printed book. If you care about statistics and the real number of pages you have read, just like I do, this modification is for you!
