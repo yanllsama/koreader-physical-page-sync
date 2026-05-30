@@ -10,7 +10,6 @@ If you are tired of the default "1 screen = 1 page" or the generic 1500 characte
 * **True Physical Page Count:** Lock the bottom progress bar and reading statistics to the exact number of pages in the printed version of your book.
 * **Smart Ninja Engine:** Automatically calculates how many screen taps (page turns) equal one physical page based on your current font size and formatting.
 * **Google Books Integration:** Fetch the physical page count directly from Google Books API using the book's metadata.
-* **Margin Indicators:** Shows the stable physical page numbers in the margins while reading.
 * **Reset Anytime:** Easily revert back to KOReader's default synthetic page calculation with a single tap.
 
 ## ⚙️ Installation
