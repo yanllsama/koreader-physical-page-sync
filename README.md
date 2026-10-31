@@ -16,7 +16,6 @@ Tired of the default "1 screen = 1 page" or the generic 1500 characters per page
 * **Instant 0-Second Startup:** Precalculates and caches the optimal synthetic page layout (CPP), eliminating the 5–10 second freeze on book open.
 * **Font Size Lock & Protection:** Once synchronized, your font size is locked to prevent accidental pinch-to-zoom or layout changes from disrupting your page ratio. Unlock anytime with a single tap from the menu.
 * **Full Book Map Integration:** Fixes the Book Map widget! Tick marks scale 1:1 to physical pages, TOC chapters and reading position arrows align properly, and tapping a tick takes you to the exact page in the book.
-* **Optional Multilingual Support:** Clean, standard gettext English base with an optional drop-in Turkish localization patch (1-physical-page-sync-custom-locale.lua).
 * **One-Tap Reset:** Restore KOReader's default pagination settings for any book instantly.
 
 ## Installation
