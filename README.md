@@ -10,10 +10,9 @@ If you are tired of the default "1 screen = 1 page" or the generic 1500 characte
 
 *(Note: This mod is still in the testing phase. We will continue to improve the project and fix any bugs that may arise with your valuable feedback.)*
 
-## ✨ Features
+##  Features
 * **True Physical Page Count:** Lock the bottom progress bar and reading statistics to the exact number of pages in the printed version of your book.
 * **Smart Ninja Engine:** Automatically calculates how many screen taps (page turns) equal one physical page based on your current font size and formatting.
-* **Google Books Integration:** Fetch the physical page count directly from Google Books API using the book's metadata.
 * **Reset Anytime:** Easily revert back to KOReader's default synthetic page calculation with a single tap.
 
 ## ⚙️ Installation
@@ -26,7 +25,7 @@ This mod replaces the default `main.lua` file inside the statistics plugin folde
 5. Download the `main.lua` from this repository and place it inside the `statistics.koplugin` folder.
 6. Restart KOReader.
 
-## 🚀 Usage
+## Usage
 1. Open any book in KOReader.
 2. Open the top menu and go to the **Reading Statistics** tab.
 3. Tap on **⚙️ Physical Page Sync** and set it to **Active**.
@@ -36,5 +35,5 @@ This mod replaces the default `main.lua` file inside the statistics plugin folde
 5. **Important Tip:** If you change your font size or style, wait a short while for the reader to finish re-rendering the pages. Then, return to the menu and select **"3. Sync for Font Size"** to update the data.
 6. Confirm the prompt. The plugin will instantly recalculate the optimal characters-per-page (cpp) ratio and lock your pages!
 
-## 📜 License
+## License
 This project inherits the GNU AGPLv3 license from the original KOReader project. All original credits go to the KOReader development team.
