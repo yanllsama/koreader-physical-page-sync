@@ -17,7 +17,6 @@ Font Size Lock & Protection: Once synchronized, your font size is locked to prev
 Full Book Map Integration: Fixes the Book Map widget! Tick marks scale 1:1 to physical pages, TOC chapters and reading position arrows align properly, and tapping a tick takes you to the exact page in the book.
 Optional Multilingual Support: Clean, standard gettext English base with an optional drop-in Turkish localization patch (1-physical-page-sync-custom-locale.lua).
 One-Tap Reset: Restore KOReader's default pagination settings for any book instantly.
-
 Installation
 
 No file replacing, no backing up main.lua! Installing is as simple as dragging and dropping files into your patches/ folder:
@@ -28,13 +27,11 @@ Kindle: extensions/koreader/patches/ (or koreader/patches/)
 Kobo: .koreader/patches/
 Android / Other: koreader/patches/ (If the patches directory doesn't exist, simply create a new folder named patches).
 Copy 2-physical-page-sync.lua into the patches/ folder.
-
 Restart KOReader.
-
 Usage
 Set Your Preferred Font Size First: When opening a book for the first time, choose your desired font size and layout. Wait a brief moment for KOReader to finish background page recalculation for the new font.
 Open the top menu and navigate to the Reading Statistics tab.
-Tap on  Physical Page Sync and make sure it is set to Active (On).
+Tap on Physical Page Sync and make sure it is set to Active (On).
 Tap 1. Enter Page Count, type in the total physical pages of your printed edition, and select "Calculate & Save".
 The patch will instantly compute the optimal ratio, auto-lock the font size, and lock your reading progress bar to the printed book!
 Useful Menu Actions:
@@ -42,7 +39,8 @@ Lock Font Size: Toggle font protection on or off to freely adjust font size when
 2. Sync for Font Size: If you change your font size later on, wait for the book to re-render, then tap this to re-calibrate the screen-to-page ratio for the new font.
 3. Enter Manual Ratio: Set a custom tap multiplier if preferred (e.g., 56 for 0.56 taps per page).
 4. Reset All Settings: Clears all custom physical page parameters for the current book and restores default KOReader pagination.
-
 License
+
+This project inherits the GNU AGPLv3 license from the original KOReader project. All original credits go to the KOReader development team.
 
 This project inherits the GNU AGPLv3 license from the original KOReader project. All original credits go to the KOReader development team.
