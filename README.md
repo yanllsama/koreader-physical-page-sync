@@ -2,38 +2,47 @@
   <img src="Reader_Sari Yuz - R. F. Kuang.epub_p.png" alt="Hata Ekranı">
 </p>
 
-# KOReader Physical Page Sync (yanllsama)
+KOReader Physical Page Sync (Ninja Engine v4)
 
-A custom modification for the official KOReader `statistics.koplugin` that synchronizes e-reader page turns with the actual physical pages of a printed book. If you care about statistics and the real number of pages you have read, just like I do, this modification is for you!
+A non-destructive KOReader User Patch that synchronizes e-reader page turns with the actual physical pages of a printed book. If you care about reading statistics and tracking the real number of pages you have read, this patch is designed for you!
 
-If you are tired of the default "1 screen = 1 page" or the generic 1500 characters per page (cpp) calculation, this mod dynamically calculates the page ratio based on your font size and locks your reading progress to the real book's page count.
+Tired of the default "1 screen = 1 page" or the generic 1500 characters per page (cpp) calculation? This patch dynamically links your screen turns to the printed book's actual page count, perfectly handles reading durations, and survives KOReader updates without touching core files.
 
-*(Note: This mod is still in the testing phase. We will continue to improve the project and fix any bugs that may arise with your valuable feedback.)*
+Features
+Zero-Touch User Patch Architecture: Does NOT overwrite any core KOReader or plugin files. It loads safely into memory at runtime and survives KOReader updates without breaking.
+True Physical Page Count: Aligns the bottom progress bar, reading statistics, and database records to the exact page count of the printed book.
+Smart Ninja Engine v4: Accurately maps screen turns to physical pages. Intermediate reading durations between multiple screen turns are accumulated and recorded into the correct physical page without losing a single second.
+Instant 0-Second Startup: Precalculates and caches the optimal synthetic page layout (CPP), eliminating the 5–10 second freeze on book open.
+Font Size Lock & Protection: Once synchronized, your font size is locked to prevent accidental pinch-to-zoom or layout changes from disrupting your page ratio. Unlock anytime with a single tap from the menu.
+Full Book Map Integration: Fixes the Book Map widget! Tick marks scale 1:1 to physical pages, TOC chapters and reading position arrows align properly, and tapping a tick takes you to the exact page in the book.
+Optional Multilingual Support: Clean, standard gettext English base with an optional drop-in Turkish localization patch (1-physical-page-sync-custom-locale.lua).
+One-Tap Reset: Restore KOReader's default pagination settings for any book instantly.
 
-##  Features
-* **True Physical Page Count:** Lock the bottom progress bar and reading statistics to the exact number of pages in the printed version of your book.
-* **Smart Ninja Engine:** Automatically calculates how many screen taps (page turns) equal one physical page based on your current font size and formatting.
-* **Reset Anytime:** Easily revert back to KOReader's default synthetic page calculation with a single tap.
+Installation
 
-## ⚙️ Installation
-This mod replaces the default `main.lua` file inside the statistics plugin folder. **Always backup your original file first!**
+No file replacing, no backing up main.lua! Installing is as simple as dragging and dropping files into your patches/ folder:
 
-1. Connect your e-reader to your computer via USB (or SSH).
-2. Navigate to your KOReader installation directory.
-3. Go to `koreader/plugins/statistics.koplugin/`.
-4. Locate the existing `main.lua` file and rename it to `main.lua.bak` (This is your backup).
-5. Download the `main.lua` from this repository and place it inside the `statistics.koplugin` folder.
-6. Restart KOReader.
+Connect your e-reader to your computer via USB (or SSH/SFTP).
+Open your KOReader directory:
+Kindle: extensions/koreader/patches/ (or koreader/patches/)
+Kobo: .koreader/patches/
+Android / Other: koreader/patches/ (If the patches directory doesn't exist, simply create a new folder named patches).
+Copy 2-physical-page-sync.lua into the patches/ folder.
 
-## Usage
-1. Open any book in KOReader.
-2. Open the top menu and go to the **Reading Statistics** tab.
-3. Tap on **⚙️ Physical Page Sync** and set it to **Active**.
-4. Choose your preferred method:
-   * **1. Manual Entry:** Enter the exact page count from your physical copy.
-   * **2. Fetch from Web:** Let the plugin find the page count via Google Books.
-5. **Important Tip:** If you change your font size or style, wait a short while for the reader to finish re-rendering the pages. Then, return to the menu and select **"3. Sync for Font Size"** to update the data.
-6. Confirm the prompt. The plugin will instantly recalculate the optimal characters-per-page (cpp) ratio and lock your pages!
+Restart KOReader.
 
-## License
+Usage
+Set Your Preferred Font Size First: When opening a book for the first time, choose your desired font size and layout. Wait a brief moment for KOReader to finish background page recalculation for the new font.
+Open the top menu and navigate to the Reading Statistics tab.
+Tap on  Physical Page Sync and make sure it is set to Active (On).
+Tap 1. Enter Page Count, type in the total physical pages of your printed edition, and select "Calculate & Save".
+The patch will instantly compute the optimal ratio, auto-lock the font size, and lock your reading progress bar to the printed book!
+Useful Menu Actions:
+Lock Font Size: Toggle font protection on or off to freely adjust font size when needed.
+2. Sync for Font Size: If you change your font size later on, wait for the book to re-render, then tap this to re-calibrate the screen-to-page ratio for the new font.
+3. Enter Manual Ratio: Set a custom tap multiplier if preferred (e.g., 56 for 0.56 taps per page).
+4. Reset All Settings: Clears all custom physical page parameters for the current book and restores default KOReader pagination.
+
+License
+
 This project inherits the GNU AGPLv3 license from the original KOReader project. All original credits go to the KOReader development team.
