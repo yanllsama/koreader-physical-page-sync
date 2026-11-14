@@ -1699,34 +1699,6 @@ function ReaderStatistics:getCurrentBookReadPages()
     return read_pages
 end
 
--- Reconnect toggle statistics switch
-function ReaderStatistics:onToggleStatistics(enable)
-    if enable ~= nil and enable == self.settings.is_enabled then return end
-    
-    self.settings.is_enabled = enable == nil and not self.settings.is_enabled or enable
-    G_reader_settings:saveSetting("statistics", self.settings)
-    
-    if self.settings.is_enabled then
-        if self.document then
-            self:initData()
-        end
-        UIManager:show(InfoMessage:new{
-            text = _("Reading statistics enabled."),
-            timeout = 2,
-        })
-    else
-        UIManager:show(InfoMessage:new{
-            text = _("Reading statistics disabled."),
-            timeout = 2,
-        })
-    end
-    
-    if self.ui.menu then
-        self.ui.menu:updateConfig("statistics")
-    end
-end
-
-
     -- ---- addToMainMenu Hook ----
     if not ReaderStatistics._yanllsama_orig_addToMainMenu then
         ReaderStatistics._yanllsama_orig_addToMainMenu = ReaderStatistics.addToMainMenu
