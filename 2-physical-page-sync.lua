@@ -684,7 +684,7 @@ function ReaderStatistics:initData()
     -- Database Update (Persist physical pages in DB)
     -- ==========================================
     if physical_pages then
-        local SQ3 = require("sq3")
+        local SQ3 = require("lua-ljsqlite3/init")
         local db_location = self.settings.db_file
         if db_location then
             local conn = SQ3.open(db_location)
